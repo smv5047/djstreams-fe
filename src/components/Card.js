@@ -1,31 +1,38 @@
-import React, { useState } from "react";
+import React from "react";
 
 import "./Card.scss";
 
-export default function Card() {
-  const [event, setEvent] = useState({
-    name: "Digital Mirage",
-    artist: "many",
-    description:
-      "Online Music Fest presented by Proximity and Brownies & Lemonade",
-    link: "http://youtube.com/Proximity",
-    headbops: 15,
-    tracklist: "www.google.com"
-  });
-
+export default function Card(props) {
   return (
     <div className="event-card">
-      <div>{event.name}</div>
-      <div>{event.artist}</div>
+      <div>
+        <h2>{props.event.event_name}</h2>
+      </div>
+      {/* <div>{props.event.artist}</div> */}
+      <div className="artists"></div>
       <div className="set-time">
         <div>Start Time</div>
         <div>End Time</div>
       </div>
-      <div>{event.description}</div>
+      {/* <div>{props.event.description}</div> */}
+      <div className="description">
+        In this spirit, influential YouTube curation channel Proximity has
+        teamed up with Los Angeles event company Brownies and Lemonade to
+        announce Digital Mirage, a new three-day online music festival with all
+        proceeds benefiting Sweet Relief Musicians Fund.
+      </div>
       <div className="card-details">
-        <div>{event.link}</div>
-        <div>{event.headbops}</div>
-        <div>{event.tracklist}</div>
+        <div>
+          <a href={props.event.link}>Link</a>
+        </div>
+        {/* <div>{props.event.headbops}</div> */}
+        <div>HEAD BOP IT</div>
+        {/* <div>{props.event.tracklist}</div> */}
+        <div>
+          <a href="https://www.1001tracklists.com/tracklist/238v18tt/sebastien-leger-beatport-live-reconnect-2020-03-28.html">
+            Tracklist
+          </a>
+        </div>
         <div>Set Reminder</div>
       </div>
     </div>
