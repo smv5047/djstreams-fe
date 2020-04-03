@@ -9,8 +9,8 @@ function Nav() {
   return (
     <div className="nav-top">
       <img className="logo" src={logo} alt="DJ Streams Logo" />
-      <h1>DJ Streams Live</h1>
-      <img src={add} alt="add event" />
+      {/* <h1>DJ Streams Live</h1>
+      <img src={add} alt="add event" /> */}
     </div>
   );
 }
