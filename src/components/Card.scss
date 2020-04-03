@@ -6,6 +6,8 @@
   font-size: 1.25rem;
   border-radius: 5px;
   box-shadow: 2px 2px #888888;
+  background-color: #fbfbfb;
+
   //   transform: translateY(0px);
   //   transition: 0.5s;
 }
@@ -17,14 +19,26 @@
   }
 }
 
+.event-title {
+  padding-bottom: 2rem;
+  color: #444b6e;
+}
+
+.artists {
+  font-size: 1.6rem;
+  color: lighten(#444b6e, 10%);
+}
+
 .set-time {
   display: flex;
   justify-content: space-evenly;
   padding: 2rem;
+  color: lighten(#444b6e, 15%);
 }
 
 .description {
   font-size: 1rem;
+  color: lighten(#444b6e, 15%);
 }
 
 .card-details {

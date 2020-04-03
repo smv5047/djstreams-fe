@@ -5,7 +5,7 @@ import "./Card.scss";
 export default function Card(props) {
   return (
     <div className="event-card">
-      <div>
+      <div className="event-title">
         <h2>{props.event.event_name}</h2>
       </div>
       {/* <div>{props.event.artist}</div> */}
