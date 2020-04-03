@@ -47,9 +47,15 @@
   //   justify-content: space-evenly;
   justify-content: center;
   padding-top: 2rem;
+  font-size: 2rem;
 
   a {
     text-decoration: none;
+    color: lighten(#444b6e, 15%);
+
+    :hover {
+      color: #444b6e;
+    }
   }
 }
 
