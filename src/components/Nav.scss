@@ -2,21 +2,25 @@
   display: flex;
   background-color: #888888;
   width: 100%;
-  justify-content: center;
+  justify-content: space-between;
   height: 10rem;
   position: fixed;
   top: 0;
 
   img {
-    max-width: 10%;
+    max-width: 20%;
     max-height: 90;
-    margin: 1rem 15rem;
+    margin: 1rem 1rem;
   }
 
   h1 {
     font-size: 3rem;
     margin-top: 3rem;
   }
+}
+
+.nav-section {
+  width: 30%;
 }
 
 .logo {

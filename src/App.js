@@ -1,4 +1,5 @@
 import React from "react";
+import { Route } from "react-router-dom";
 
 import Nav from "../src/components/Nav.js";
 import Dashboard from "../src/components/Dashboard";
@@ -10,8 +11,8 @@ function App() {
   return (
     <div className="App">
       <Nav />
-      <Dashboard />
-      <AddEvent />
+      <Route exact path="/" component={Dashboard} />
+      <Route exact path="/AddEvent" component={AddEvent} />
     </div>
   );
 }
