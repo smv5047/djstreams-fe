@@ -9,12 +9,11 @@ import "./Nav.scss";
 function Nav() {
   return (
     <div className="nav-top">
-      <div className="nav-section">
-        <h1></h1>
-      </div>
+      <div className="nav-section"></div>
       <div className="nav-section">
         <Link to="/">
           <img className="logo" src={logo} alt="DJ Streams Logo" />
+          {/* DJ Streams Live */}
         </Link>
       </div>
       <div className="nav-section">
