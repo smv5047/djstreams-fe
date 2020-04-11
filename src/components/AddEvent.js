@@ -21,17 +21,17 @@ export default function AddEvent() {
     });
   };
 
+  //TODO start here
   const handleSubmit = (e) => {
     e.preventdefault();
-    setNewEvent({
-      event_name: "",
-      event_start: "",
-      event_end: "",
-      description: "",
-      event_platform: "",
-      event_link: "",
-    });
-    console.log("submitted");
+    console.log(newEvent);
+    axios
+      .post("https://djstreams.herokuapp.com/api/events", newEvent)
+      .then((res) => {
+        setNewEvent(res.data);
+        console.log("success", res);
+      })
+      .catch((err) => console.log(err.response));
   };
 
   return (
@@ -75,7 +75,7 @@ export default function AddEvent() {
             placeholder="www.twitch.tv/skrillex"
             name="link"
             onChange={(e) => handleChange(e)}
-            type="url"
+            type="text"
             value={newEvent.link}
           />
         </label>
