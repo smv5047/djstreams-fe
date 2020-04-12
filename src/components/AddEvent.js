@@ -21,17 +21,18 @@ export default function AddEvent() {
     });
   };
 
-  //TODO start here
+  //TODO Fix hanbdle submit
   const handleSubmit = (e) => {
-    e.preventdefault();
-    console.log(newEvent);
-    axios
-      .post("https://djstreams.herokuapp.com/api/events", newEvent)
-      .then((res) => {
-        setNewEvent(res.data);
-        console.log("success", res);
-      })
-      .catch((err) => console.log(err.response));
+    // e.preventDefault();
+    console.log("hello");
+    // console.log(newEvent);
+    // axios
+    //   .post("https://djstreams.herokuapp.com/api/events", newEvent)
+    //   .then((res) => {
+    //     setNewEvent(res.data);
+    //     console.log("success", res);
+    //   })
+    //   .catch((err) => console.log(err.response));
   };
 
   return (
