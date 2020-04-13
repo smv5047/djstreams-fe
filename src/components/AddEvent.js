@@ -21,8 +21,8 @@ export default function AddEvent() {
     });
   };
 
-  //TODO Fix hanbdle submit
-  const handleSubmit = (e) => {
+  //TODO Fix hanbdle submit -does it need to be passed "e" argument
+  const handleSubmit = () => {
     // e.preventDefault();
     console.log("hello");
     // console.log(newEvent);
