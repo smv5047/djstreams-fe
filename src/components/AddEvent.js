@@ -10,36 +10,42 @@ export default function AddEvent() {
     event_end: "",
     description: "",
     event_platform: "",
-    event_link: "",
+    link: "",
   });
 
   const handleChange = (e) => {
-    console.log(e.target.name);
+    console.log(e.target.name, newEvent);
+
     setNewEvent({
       ...newEvent,
       [e.target.name]: e.target.value,
     });
   };
 
-  //TODO Fix hanbdle submit -does it need to be passed "e" argument
-  //Complete submit and
-
-  const handleSubmit = () => {
-    // e.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault();
     console.log("hello");
-    // console.log(newEvent);
-    // axios
-    //   .post("https://djstreams.herokuapp.com/api/events", newEvent)
-    //   .then((res) => {
-    //     setNewEvent(res.data);
-    //     console.log("success", res);
-    //   })
-    //   .catch((err) => console.log(err.response));
+    console.log(newEvent);
+    axios
+      .post("https://djstreams.herokuapp.com/api/events", newEvent)
+      .then((res) => {
+        setNewEvent(res.data);
+        console.log("success", res);
+      })
+      .catch((err) => console.log(err.response));
+    setNewEvent({
+      event_name: "",
+      event_start: "",
+      event_end: "",
+      description: "",
+      event_platform: "",
+      event_link: "",
+    });
   };
 
   return (
     <>
-      <form>
+      <form onSubmit={handleSubmit}>
         <label>Event Name:</label>
         <input
           placeholder="Event Name"
@@ -54,15 +60,15 @@ export default function AddEvent() {
           name="event_start"
           onChange={(e) => handleChange(e)}
           value={newEvent.event_start}
-          type="datetime-local"
+          type="text"
         />
         <label>End Name:</label>
         <input
           placeholder="End Time"
-          name="event-end"
+          name="event_end"
           onChange={(e) => handleChange(e)}
           value={newEvent.event_end}
-          type="datetime-local"
+          type="text"
         />
         {/* <label>
           Platform:
@@ -94,9 +100,7 @@ export default function AddEvent() {
           ></textarea>
         </label>
         <br></br>
-        <button type="submit" onSubmit={handleSubmit}>
-          Add Event
-        </button>
+        <button type="submit">Add Event</button>
       </form>
     </>
   );
