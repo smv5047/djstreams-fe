@@ -22,6 +22,8 @@ export default function AddEvent() {
   };
 
   //TODO Fix hanbdle submit -does it need to be passed "e" argument
+  //Complete submit and
+
   const handleSubmit = () => {
     // e.preventDefault();
     console.log("hello");
