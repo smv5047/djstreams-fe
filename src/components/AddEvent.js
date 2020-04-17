@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 
 import "./AddEvent.scss";
@@ -44,7 +44,7 @@ export default function AddEvent() {
   };
 
   return (
-    <>
+    <div className="form-container">
       <form onSubmit={handleSubmit}>
         <label>Event Name:</label>
         <input
@@ -60,7 +60,7 @@ export default function AddEvent() {
           name="event_start"
           onChange={(e) => handleChange(e)}
           value={newEvent.event_start}
-          type="text"
+          type="datetime-local"
         />
         <label>End Name:</label>
         <input
@@ -102,6 +102,6 @@ export default function AddEvent() {
         <br></br>
         <button type="submit">Add Event</button>
       </form>
-    </>
+    </div>
   );
 }

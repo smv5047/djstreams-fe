@@ -13,6 +13,7 @@ export default function Card(props) {
       <div className="set-time">
         {/* <div>Start Time</div> */}
         <div>{props.event.event_start}</div>
+        {/* <div>{new Date(props.event.event_start).getMonth()}</div> */}
         {/* <div>End Time</div> */}
         <div>{props.event.event_end}</div>
       </div>

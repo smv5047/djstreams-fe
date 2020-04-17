@@ -11,8 +11,10 @@ function App() {
   return (
     <div className="App">
       <Nav />
-      <Route exact path="/" component={Dashboard} />
-      <Route exact path="/AddEvent" component={AddEvent} />
+      <div className="container">
+        <Route exact path="/" component={Dashboard} />
+        <Route exact path="/AddEvent" component={AddEvent} />
+      </div>
     </div>
   );
 }
