@@ -18,6 +18,9 @@
       height: 100%;
       max-width: 40%;
     }
+    @media (max-width: 600px) {
+      max-width: 60%;
+    }
   }
 
   h1 {

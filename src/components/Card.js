@@ -51,7 +51,9 @@ export default function Card(props) {
       <div className="description">{props.event.description}</div>
       <div className="card-details">
         <div>
-          <a href={props.event.link}>Start Listening</a>
+          <a href={props.event.link} target="_blank" rel="noopener noreferrer">
+            Start Listening
+          </a>
         </div>
         {/* <div>{props.event.headbops}</div> */}
         {/* <div>HEAD BOP IT</div> */}
