@@ -11,6 +11,7 @@ export default function AddEvent() {
     description: "",
     event_platform: "",
     link: "",
+    artist: "",
   });
 
   const handleChange = (e) => {
@@ -24,52 +25,63 @@ export default function AddEvent() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("hello");
-    console.log(newEvent);
     axios
       .post("https://djstreams.herokuapp.com/api/events", newEvent)
       .then((res) => {
-        setNewEvent(res.data);
-        console.log("success", res);
+        // setNewEvent(res.data);
+        // console.log("success", res);
+        window.alert(`Thank you for adding ${newEvent.event_name}`);
+        setNewEvent({
+          event_name: "",
+          event_start: "",
+          event_end: "",
+          description: "",
+          event_platform: "",
+          event_link: "",
+        });
       })
       .catch((err) => console.log(err.response));
-    setNewEvent({
-      event_name: "",
-      event_start: "",
-      event_end: "",
-      description: "",
-      event_platform: "",
-      event_link: "",
-    });
   };
 
   return (
     <div className="form-container">
       <form onSubmit={handleSubmit}>
-        <label>Event Name:</label>
-        <input
-          placeholder="Event Name"
-          onChange={(e) => handleChange(e)}
-          name="event_name"
-          value={newEvent.event_name}
-          type="text"
-        />
-        <label>Start Time:</label>
-        <input
-          placeholder="Start Time"
-          name="event_start"
-          onChange={(e) => handleChange(e)}
-          value={newEvent.event_start}
-          type="datetime-local"
-        />
-        <label>End Name:</label>
-        <input
-          placeholder="End Time"
-          name="event_end"
-          onChange={(e) => handleChange(e)}
-          value={newEvent.event_end}
-          type="datetime-local"
-        />
+        <row>
+          <label>Event Name</label>
+        </row>
+        <row>
+          <input
+            placeholder="Event Name"
+            onChange={(e) => handleChange(e)}
+            name="event_name"
+            value={newEvent.event_name}
+            type="text"
+          />
+        </row>
+        <row>
+          <label>Start Time</label>
+        </row>
+        <row>
+          <input
+            placeholder="Start Time"
+            name="event_start"
+            onChange={(e) => handleChange(e)}
+            value={newEvent.event_start}
+            type="datetime-local"
+          />
+        </row>
+        <row>
+          <label>End Time</label>
+        </row>
+        <row>
+          <input
+            placeholder="End Time"
+            name="event_end"
+            onChange={(e) => handleChange(e)}
+            value={newEvent.event_end}
+            type="datetime-local"
+          />
+        </row>
         {/* <label>
           Platform:
           <select name="event_platform" onChange={(e) => handleChange(e)}>
@@ -78,8 +90,10 @@ export default function AddEvent() {
             <option value="other">Other</option>
           </select>
         </label> */}
-        <label>
-          Link:
+        <row>
+          <label>Link</label>
+        </row>
+        <row>
           <input
             placeholder="www.twitch.tv/skrillex"
             name="link"
@@ -87,20 +101,24 @@ export default function AddEvent() {
             type="text"
             value={newEvent.link}
           />
-        </label>
-        <label>
-          Artists:
+        </row>
+        <row>
+          <label>Artists</label>
+        </row>
+        <row>
           <textarea
             name="description"
             onChange={(e) => handleChange(e)}
             placeholder="Add the Event Description Here"
-            rows="10"
-            columns="40"
+            rows="5"
+            columns="100"
             value={newEvent.description}
           ></textarea>
-        </label>
+        </row>
         <br></br>
-        <button type="submit">Add Event</button>
+        <row>
+          <button type="submit">Add Event</button>
+        </row>
       </form>
     </div>
   );

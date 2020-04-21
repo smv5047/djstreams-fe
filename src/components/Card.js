@@ -38,13 +38,15 @@ export default function Card(props) {
           <h2>{props.event.event_name}</h2>
         )}
       </div>
-      <div className="artists">Artist: {props.event.artist}</div>
+      <div className="artists">
+        <h2>Artist: {props.event.artist}</h2>
+      </div>
       <div className="set-time">
         <div>
-          Starts At: {formattedStartDate} {formattedStartTime}
+          <h2>Starts At:</h2> {formattedStartDate} {formattedStartTime}
         </div>
         <div>
-          Ends At: {formattedEndDate} {formattedEndTime}
+          <h2>Ends At:</h2> {formattedEndDate} {formattedEndTime}
         </div>
       </div>
 

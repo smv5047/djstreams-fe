@@ -1,9 +1,54 @@
 .form-container {
   width: 800px;
-  display: flex;
-  border: 1px solid red;
+  margin: 0 auto;
 }
 
 form {
-  padding-top: 15rem;
+  padding: 12rem 0 60rem;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  color: #725ac1;
+  font-weight: 800;
+  font-size: 1.5rem;
+  width: 100%;
+  justify-content: center;
+}
+
+row {
+  width: 60%;
+  padding: 0.5rem 0;
+}
+label {
+  width: 10rem;
+  height: 2rem;
+  font-size: 2rem;
+}
+input {
+  width: 25rem;
+  border-radius: 5px;
+}
+
+textarea {
+  width: 25rem;
+  border-radius: 5px;
+}
+
+button {
+  padding: 1rem;
+  border-radius: 20px;
+  font-family: "Asap", sans-serif;
+  color: #725ac1;
+  background-color: white;
+  font-weight: 600;
+}
+
+button:hover {
+  background-color: #725ac1;
+  border-radius: 20px;
+  color: white;
+}
+
+button:active {
+  box-shadow: inset 0px 0px 5px;
 }
