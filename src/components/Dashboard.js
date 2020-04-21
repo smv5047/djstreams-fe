@@ -11,13 +11,24 @@ export default function Dashboard() {
   useEffect(() => {
     axios
       .get("https://djstreams.herokuapp.com/api/events")
-      .then(res => setEvents(res.data))
-      .catch(err => console.log(err));
+      .then((res) => setEvents(res.data))
+      .catch((err) => console.log(err));
   }, []);
+
+  //Sort Events By Most Recent
+
+  let sortableEvents = events;
+  sortableEvents.sort(function (a, b) {
+    // Turn your strings into dates, and then subtract them
+    // to get a value that is either negative, positive, or zero.
+    return new Date(b.event_start) - new Date(a.event_start);
+  });
+  sortableEvents.reverse();
+  console.log(sortableEvents);
 
   return (
     <div className="dashboard">
-      {events.map(event => (
+      {events.map((event) => (
         <Card event={event} key={event.id} />
       ))}
     </div>

@@ -3,27 +3,52 @@ import React from "react";
 import "./Card.scss";
 
 export default function Card(props) {
+  let newStartDate = Date.parse(props.event.event_start);
+  let formattedStartDate = new Date(newStartDate).toLocaleDateString();
+  let formattedStartTime = new Date(newStartDate).toLocaleTimeString();
+
+  let newEndDate = Date.parse(props.event.event_end);
+  let formattedEndDate = new Date(newEndDate).toLocaleDateString();
+  let formattedEndTime = new Date(newEndDate).toLocaleTimeString();
+
+  console.log(new Date());
+
+  let currentTime = new Date();
+
+  let currentTimeMillisecs = Date.parse(currentTime);
+
+  let isLive = false;
+  if (
+    currentTimeMillisecs > newStartDate &&
+    currentTimeMillisecs < newEndDate
+  ) {
+    isLive = true;
+  }
+
   return (
     <div className="event-card">
-      <div className="event-title">
-        <h2>{props.event.event_name}</h2>
+      <div className="event-card-header">
+        {isLive && <div className="live">Live Now!</div>}
       </div>
-      {/* <div>{props.event.artist}</div> */}
-      <div className="artists">Artist: {props.event.description}</div>
+      <div className="event-title">
+        {/* If Stream Is Part of a Wider Event The Name Would be Be Displayed Here, Dafaults ot Artists NAme*/}
+        {!props.event.event_name ? (
+          <h2>{props.event.artist}'s Stream</h2>
+        ) : (
+          <h2>{props.event.event_name}</h2>
+        )}
+      </div>
+      <div className="artists">Artist: {props.event.artist}</div>
       <div className="set-time">
-        {/* <div>Start Time</div> */}
-        <div>{props.event.event_start}</div>
-        {/* <div>{new Date(props.event.event_start).getMonth()}</div> */}
-        {/* <div>End Time</div> */}
-        <div>{props.event.event_end}</div>
+        <div>
+          Starts At: {formattedStartDate} {formattedStartTime}
+        </div>
+        <div>
+          Ends At: {formattedEndDate} {formattedEndTime}
+        </div>
       </div>
 
-      <div className="description">
-        In this spirit, influential YouTube curation channel Proximity has
-        teamed up with Los Angeles event company Brownies and Lemonade to
-        announce Digital Mirage, a new three-day online music festival with all
-        proceeds benefiting Sweet Relief Musicians Fund.
-      </div>
+      <div className="description">{props.event.description}</div>
       <div className="card-details">
         <div>
           <a href={props.event.link}>Start Listening</a>

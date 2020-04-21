@@ -68,7 +68,7 @@ export default function AddEvent() {
           name="event_end"
           onChange={(e) => handleChange(e)}
           value={newEvent.event_end}
-          type="text"
+          type="datetime-local"
         />
         {/* <label>
           Platform:

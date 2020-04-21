@@ -7,9 +7,14 @@ body {
   width: 100%;
   margin: 25px auto 15px;
   text-align: center;
+  background-color: #242038;
 }
 
 .container {
-  width: 1400px;
+  max-width: 1400px;
   margin: 0 auto;
+
+  @media (max-width: 1400px) {
+    width: 100%;
+  }
 }

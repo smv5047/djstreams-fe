@@ -5,11 +5,18 @@
   border: 1px black solid;
   font-size: 1.25rem;
   border-radius: 5px;
-  box-shadow: 2px 2px #888888;
-  background-color: #fbfbfb;
+  box-shadow: 3px 3px #777da7;
+  background-color: #725ac1;
 
   //   transform: translateY(0px);
   //   transition: 0.5s;
+}
+
+@media (max-width: 1200px) {
+  .event-card {
+    width: 45%;
+    margin: 1rem 2rem;
+  }
 }
 
 @media (max-width: 800px) {
@@ -19,26 +26,34 @@
   }
 }
 
+.event-card-header {
+  display: inline;
+  text-align: left;
+  font-weight: 800;
+  color: white;
+  font-size: 1.5rem;
+}
+
 .event-title {
   padding-bottom: 2rem;
-  color: #444b6e;
+  color: white;
 }
 
 .artists {
   font-size: 1.6rem;
-  color: lighten(#444b6e, 10%);
+  color: lighten(white, 10%);
 }
 
 .set-time {
   display: flex;
   justify-content: space-evenly;
   padding: 2rem;
-  color: lighten(#444b6e, 15%);
+  color: lighten(white, 15%);
 }
 
 .description {
   font-size: 1rem;
-  color: lighten(#444b6e, 15%);
+  color: lighten(white, 15%);
 }
 
 .card-details {
@@ -51,7 +66,7 @@
 
   a {
     text-decoration: none;
-    color: lighten(#444b6e, 15%);
+    color: lighten(white, 15%);
 
     :hover {
       color: #444b6e;

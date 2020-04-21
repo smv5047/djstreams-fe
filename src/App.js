@@ -4,6 +4,7 @@ import { Route } from "react-router-dom";
 import Nav from "../src/components/Nav.js";
 import Dashboard from "../src/components/Dashboard";
 import AddEvent from "../src/components/AddEvent";
+import Footer from "../src/components/Footer";
 
 import "./App.scss";
 
@@ -15,6 +16,7 @@ function App() {
         <Route exact path="/" component={Dashboard} />
         <Route exact path="/AddEvent" component={AddEvent} />
       </div>
+      <Footer />
     </div>
   );
 }

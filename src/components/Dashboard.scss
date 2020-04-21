@@ -3,6 +3,9 @@
   display: flex;
   flex-wrap: wrap;
   padding-top: 10rem;
+  background-color: #242038;
+  width: 100%;
+
   :hover {
     transform: translateY(-5px);
     transition: 0.5s;
