@@ -5,11 +5,17 @@ import "./Card.scss";
 export default function Card(props) {
   let newStartDate = Date.parse(props.event.event_start);
   let formattedStartDate = new Date(newStartDate).toLocaleDateString();
-  let formattedStartTime = new Date(newStartDate).toLocaleTimeString();
+  let formattedStartTime = new Date(newStartDate).toLocaleTimeString([], {
+    hour: "2-digit",
+    minute: "2-digit",
+  });
 
   let newEndDate = Date.parse(props.event.event_end);
   let formattedEndDate = new Date(newEndDate).toLocaleDateString();
-  let formattedEndTime = new Date(newEndDate).toLocaleTimeString();
+  let formattedEndTime = new Date(newEndDate).toLocaleTimeString([], {
+    hour: "2-digit",
+    minute: "2-digit",
+  });
 
   console.log(new Date());
 
