@@ -7,7 +7,7 @@ import AddEvent from "../src/components/AddEvent";
 import Footer from "../src/components/Footer";
 
 import "./App.scss";
-//Update spinner//
+
 function App() {
   return (
     <div className="App">
