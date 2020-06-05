@@ -7,7 +7,7 @@ import AddEvent from "../src/components/AddEvent";
 import Footer from "../src/components/Footer";
 
 import "./App.scss";
-
+//move spinner to top levle of app
 function App() {
   return (
     <div className="App">
