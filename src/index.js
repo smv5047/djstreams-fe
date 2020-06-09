@@ -11,5 +11,5 @@ ReactDOM.render(
   </Router>,
   document.getElementById("root")
 );
-
+//Update Serviceworker
 serviceWorker.register();
