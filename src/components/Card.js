@@ -1,7 +1,7 @@
 import React from "react";
 
 import "./Card.scss";
-//Update car display
+
 export default function Card(props) {
   let newStartDate = Date.parse(props.event.event_start);
   let formattedStartDate = new Date(newStartDate).toLocaleDateString();
