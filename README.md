@@ -18,7 +18,7 @@ Include logo/demo screenshot etc.
 - Add DJ Live Streams
 - View DJ Live Streams
 - See Which DJ Live Streams are Happening Now
-- Navigate to Platform Hosting the Live Stream
+- Navigate to the Platform Hosting the Live Stream
 
 ## Installation
 To get the development environment up and running, clone the repo locally and then use npm install. See contribution guidelines below.
@@ -27,16 +27,12 @@ To get the development environment up and running, clone the repo locally and th
 
 See the [DJ Streams Back-End Repo] (https://github.com/smv5047/djstreams-be)
 
-
-## How to use?
-If people like your project they’ll want to learn how they can use it. To do so include step by step guide to use your project.
-
 ## Contribute
 
-Let people know how they can contribute into your project. A [contributing guideline](https://github.com/zulip/zulip-electron/blob/master/CONTRIBUTING.md) will be a big plus.
+DJ Streams is open for contributions. If you'd like to contribute, feel free to reach out. You can also check out the Roadmap below to get a feel for some future ideas for the product.
 
 ## Credits
-Give proper credits. This could be a link to any repo which inspired you to build this project, any blogposts or links to people who contrbuted in this project. 
+Props to Akash Nimare for providing this ReadMe Template. That you to the ReactJS and React Router teams for their tireless work in support of the React ecosystem.
 
 ## Future Roadmap
 
