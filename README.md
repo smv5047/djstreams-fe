@@ -1,68 +1,39 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## DJ Streams Live
+DJ Streams Live is a CRUD app for aggregating DJ Live Streams across the internet. It's intent is to simplify the process of determining which DJs are live streaming and when. A TV Guide of sorts for DJ streams.
 
-## Available Scripts
+## Motivation
+In the age of COVID DJ Livestreams across platforms such as Twitch, Youtube, Mixcloud, and Instagram have proliferated. The volume of DJ Streams. This CRUD app is met to aggregate DJ Live Streams across all platforms. Initially aggregation of events will be via manually entry. On the roadmap is to integrate scrapping of Twitter (and potentially other platforms) to determine when live streams will be occuring. DJ Streams Live will be the one stop shop for finding your favorite DJ Live Streams.
 
-In the project directory, you can run:
 
-### `yarn start`
+## Screenshots
+Include logo/demo screenshot etc.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Tech/framework used
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+<b>Built with</b>
+- [ReactJS](https://reactjs.org)
+- [React Router](https://reactrouter.com/)
 
-### `yarn test`
+## Features
+- Add DJ Live Streams
+- View DJ Live Streams
+- See Which DJ Live Streams are Happening Now
+- Navigate to the Platform Hosting the Live Stream
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation
+To get the development environment up and running, clone the repo locally and then use npm install. See contribution guidelines below.
 
-### `yarn build`
+## API Reference
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+See the [DJ Streams Back-End Repo] (https://github.com/smv5047/djstreams-be)
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Contribute
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+DJ Streams is open for contributions. If you'd like to contribute, feel free to reach out. You can also check out the Roadmap below to get a feel for some future ideas for the product.
 
-### `yarn eject`
+## Credits
+Props to Akash Nimare for providing this ReadMe Template. That you to the ReactJS and React Router teams for their tireless work in support of the React ecosystem.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Future Roadmap
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+[Check out the Future Roadmap on Notion](https://www.notion.so/a18c8e940ca04dc8a9df6fa191a0ed55?v=0962f0a498a942aab11e0b733c2a2570)
